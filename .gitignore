@@ -1,0 +1,13 @@
+.env
+server/.env
+client/.env
+node_modules/
+venv/
+**/__pycache__/
+dist/
+build/
+*.log
+.next/
+coverage/
+.DS_Store
+*.local

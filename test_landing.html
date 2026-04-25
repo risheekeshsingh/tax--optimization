@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "on-primary": "#003824",
+                        "outline": "#909097",
+                        "on-error": "#690005",
+                        "primary": "#4edea3",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "primary-fixed-dim": "#4edea3",
+                        "tertiary-container": "#0f172a",
+                        "on-secondary-container": "#b0b2ff",
+                        "on-secondary-fixed": "#07006c",
+                        "on-secondary": "#1000a9",
+                        "tertiary-fixed": "#dae2fd",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#31394d",
+                        "inverse-primary": "#006c49",
+                        "secondary-container": "#3131c0",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#001c10",
+                        "primary-fixed": "#6ffbbe",
+                        "on-primary-fixed-variant": "#005236",
+                        "secondary": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#2f2ebe",
+                        "surface-container-lowest": "#060e20",
+                        "on-surface-variant": "#c6c6cd",
+                        "tertiary": "#bec6e0",
+                        "surface-variant": "#2d3449",
+                        "on-primary-fixed": "#002113",
+                        "on-surface": "#dae2fd",
+                        "on-primary-container": "#009365",
+                        "surface-dim": "#0b1326",
+                        "surface-tint": "#4edea3",
+                        "surface-container-highest": "#2d3449",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "on-tertiary-container": "#798098",
+                        "surface-container-low": "#131b2e",
+                        "on-background": "#dae2fd",
+                        "surface-container": "#171f33",
+                        "surface": "#0b1326",
+                        "inverse-on-surface": "#283044",
+                        "outline-variant": "#45464d",
+                        "on-tertiary": "#283044",
+                        "secondary-fixed": "#e1e0ff",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "background": "#0b1326",
+                        "surface-container-high": "#222a3d",
+                        "inverse-surface": "#dae2fd",
+                        "on-tertiary-fixed": "#131b2e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(45, 52, 73, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .text-gradient-primary {
+            background: linear-gradient(135deg, #4edea3 0%, #c0c1ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #4edea3 0%, #c0c1ff 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-2xl flex justify-between items-center w-full px-8 py-4 shadow-[inset_0px_1px_0px_0px_rgba(78,222,163,0.1)]">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-black bg-gradient-to-br from-emerald-400 to-indigo-400 bg-clip-text text-transparent font-manrope font-extrabold tracking-tight">TaxSavant AI</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-emerald-400 font-bold font-label text-sm hover:saturate-150 transition-all" href="#">Dashboard</a>
+<a class="text-slate-400 font-label text-sm hover:saturate-150 transition-all" href="#">AI Assistant</a>
+<a class="text-slate-400 font-label text-sm hover:saturate-150 transition-all" href="#">Catalog</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:saturate-150 transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-400 hover:saturate-150 transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="User profile" data-alt="close-up portrait of a professional man with a confident expression, neutral background, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeU36-Jgx0Z63cLQTNZFwQR9YFPvk95hGsVooJ4H94ZE94Ak7_yL0HoZrWGBomXqINNcjfcMOWL7JC8tEf67sEo11Qftlz38Ha0cp5pMsKA4WB1_jV0jsAlbvdXS0ITSNOnM_zsudngrwGKEKKjxBxcbkmsdzWsxDJvodEnp2Mx_2P8_K6u2IzQLvfKfkYD6Fq6PsE0Z8e5r0MMry6U8i2LpAk0PaW7hpuB-zAwPJntwmmuji5YFrmSNl5vvHJV5XKbGjt6V85Iec"/>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 px-8 overflow-hidden min-h-screen flex flex-col justify-center items-center">
+<!-- Insight Glow background element -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-secondary-container opacity-5 blur-[120px] pointer-events-none"></div>
+<div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-primary/10">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label text-xs uppercase tracking-widest text-primary-fixed-dim">Tax Saving Redefined</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-extrabold tracking-tight font-headline text-on-surface leading-[1.1]">
+                    Stop Overpaying <span class="text-gradient-primary">Tax.</span> Start Saving <span class="text-gradient-primary">Smart.</span>
+</h1>
+<p class="text-xl text-on-surface-variant font-medium max-w-xl">
+                    Your personal AI that helps you save more tax all year round. Lumina Ledger optimizes your financial DNA in seconds.
+                </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<button class="bg-gradient-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:saturate-150 hover:shadow-[0_0_20px_rgba(78,222,163,0.4)] transition-all scale-98 active:opacity-80">
+                        Get Started in 2 Minutes
+                    </button>
+<button class="flex items-center gap-2 bg-surface-container-highest/50 backdrop-blur-md px-8 py-4 rounded-xl font-bold text-lg text-on-surface hover:bg-surface-container-highest transition-all border border-outline-variant/15">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+                        How it works
+                    </button>
+</div>
+</div>
+<!-- AI Chat Preview -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+<div class="relative glass-panel rounded-xl p-8 border border-outline-variant/15 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="smart_toy" data-weight="fill" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Lumina AI Agent</p>
+<p class="font-label text-xs text-primary">Always analyzing...</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container rounded-lg p-4 max-w-[80%] self-start border-l-2 border-primary">
+<p class="text-sm font-label text-on-surface">I've detected a $1,200 potential deduction in your recent hardware purchases. Would you like me to apply it to your Q4 forecast?</p>
+</div>
+<div class="bg-primary/10 rounded-lg p-4 max-w-[80%] self-end ml-auto border border-primary/20">
+<p class="text-sm font-label text-on-surface">Yes, please. How does that affect my total tax liability for the year?</p>
+</div>
+<div class="bg-surface-container rounded-lg p-4 max-w-[80%] self-start border-l-2 border-secondary">
+<p class="text-sm font-label text-on-surface">Applying now... Your estimated savings for the year is now <span class="text-primary font-bold">$4,850</span>. That's 14% higher than last year.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center justify-between">
+<span class="text-on-surface-variant text-sm font-label">Ask Lumina about your tax...</span>
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="send">send</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works: Bento Grid Layout -->
+<section class="py-32 px-8 relative">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<p class="font-label text-xs uppercase tracking-widest text-primary mb-4">The Process</p>
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline text-on-surface">Your Journey to Smarter Savings</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
+<!-- Step 1 -->
+<div class="md:col-span-8 glass-panel rounded-xl p-10 flex flex-col justify-between border border-outline-variant/15 overflow-hidden group">
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center font-bold text-xl mb-6">1</div>
+<h3 class="text-3xl font-bold font-headline mb-4">Enter Details</h3>
+<p class="text-on-surface-variant max-w-md">Connect your accounts securely. Our 256-bit encrypted AI scanner reads through your transactions to find hidden gems.</p>
+</div>
+<div class="absolute bottom-[-50px] right-[-50px] opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[240px]" data-icon="document_scanner">document_scanner</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="md:col-span-4 bg-surface-container-high rounded-xl p-10 flex flex-col justify-between border border-outline-variant/15 overflow-hidden">
+<div>
+<div class="w-12 h-12 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-bold text-xl mb-6">2</div>
+<h3 class="text-2xl font-bold font-headline mb-4">Get Suggestions</h3>
+<p class="text-on-surface-variant text-sm">Real-time AI alerts for every eligible deduction, expense, and credit.</p>
+</div>
+<div class="w-full h-24 bg-surface-container-lowest/50 rounded-xl flex items-center px-4 gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="h-2 w-full bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="md:col-span-12 glass-panel rounded-xl p-10 flex flex-col md:flex-row items-center justify-between gap-12 border border-outline-variant/15 relative overflow-hidden">
+<div class="relative z-10 md:w-1/2">
+<div class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center font-bold text-xl mb-6">3</div>
+<h3 class="text-4xl font-bold font-headline mb-4">Save tax</h3>
+<p class="text-on-surface-variant text-lg">Watch your tax liability drop as Lumina automatically files and optimizes your returns with certified accuracy.</p>
+<button class="mt-8 text-primary font-bold flex items-center gap-2 hover:translate-x-2 transition-transform">
+                            Explore the savings catalog <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="relative md:w-1/2 flex justify-center">
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+<img alt="Financial Dashboard" class="relative rounded-xl border border-outline-variant/20 shadow-2xl" data-alt="slick interface showing complex financial charts and bar graphs in a dark mode digital dashboard with emerald accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBm94TxmVzxZRolsqXwIsXtxMcClXkT0ToE5DZKI89qDVMmfKhLCocBU9aLNMF4KjlQ1Ejedd6I206oDzKxma-wMUmVc-gyppeMP1CTkGEkUUfmz1ZE1vrp1p0FQTH009MqtZNXSQVycZb0lWz_N1yVDZULIfSABQ4OVdDT6lkb6E15bLLDZvVdCLRZ8sMlH5wjd0NxZm-9lbOLXRQ2OMXrW5KnqwsM26C-WhDgGYJSVkyT4Y4NfMEpr9NxhJzwoQj1UeujD8umtE"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Elements / Feature Highlights -->
+<section class="py-24 px-8 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="flex-1 space-y-12">
+<h2 class="text-5xl font-extrabold font-headline leading-tight">Beyond Simple Accounting.<br/><span class="text-gradient-primary">Proactive Curating.</span></h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="text-xl font-bold font-headline">AI Optimization</h4>
+<p class="text-sm text-on-surface-variant">Continuous learning algorithms that adapt to new tax laws overnight.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified_user">verified_user</span>
+<h4 class="text-xl font-bold font-headline">Bank-Grade Security</h4>
+<p class="text-sm text-on-surface-variant">Your data is siloed and encrypted with military-grade protocols.</p>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full">
+<div class="aspect-square rounded-xl overflow-hidden relative border border-outline-variant/20">
+<img alt="Blockchain and Security Concept" class="w-full h-full object-cover" data-alt="abstract digital visualization of data streams and secure networks with glowing green and purple nodes on a dark navy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx_GReSmEnSMgp_KOOgetuklCTdOXbIOF0BIxS_1d4hkabQHA2MmlOHg_R5arWms4MsdVH_uHpCqaYjtWABv2KteSsREtGHJ0VXfpZ2JNiH_Yv1HIEVB1Sbw0JpE2Ny4xPQOhZpEhBmfWWdaPBQONPHdHK2GVAFlgDSg0c65KwyVS2bPvXUC-b9-RAW6XBuRg933Sy1NpS3mqiZMwHXWYiisVQZE-rgDWfkKIXpbG6kIP4nv7jQgJIJMPy2pISDzpvyrIMHkFL4Og"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8 right-8 glass-panel p-6 rounded-xl border border-primary/20">
+<p class="text-sm italic font-label text-on-surface">"Lumina saved me $8,400 in my first 3 months by identifying obscure R&amp;D tax credits I didn't know I qualified for."</p>
+<p class="mt-4 font-bold text-primary">— Marcus K., Tech Founder</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 px-8 relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 blur-[150px] rounded-full"></div>
+<div class="max-w-3xl mx-auto text-center relative z-10 space-y-10">
+<h2 class="text-5xl md:text-7xl font-extrabold font-headline">Start Curating Your <span class="text-gradient-primary">Wealth.</span></h2>
+<p class="text-xl text-on-surface-variant">Join 25,000+ high-earners who use TaxSavant AI to navigate the complex world of tax optimization.</p>
+<div class="flex flex-col items-center gap-6">
+<button class="bg-gradient-primary text-on-primary px-12 py-6 rounded-xl font-bold text-2xl hover:saturate-150 hover:scale-105 transition-all shadow-xl shadow-primary/20">
+                    Get Started in 2 Minutes
+                </button>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">No credit card required • Risk-free 14-day trial</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center bg-slate-950 border-t border-outline-variant/10">
+<div class="mb-8 md:mb-0">
+<p class="font-manrope font-bold text-slate-200 text-xl mb-2">TaxSavant AI</p>
+<p class="font-inter text-xs uppercase tracking-widest text-slate-600">© 2024 TaxSavant AI. The Digital Curator.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs uppercase tracking-widest text-slate-600 hover:text-emerald-300 transition-all" href="#">Privacy Policy</a>
+<a class="font-inter text-xs uppercase tracking-widest text-slate-600 hover:text-emerald-300 transition-all" href="#">Terms of Service</a>
+<a class="font-inter text-xs uppercase tracking-widest text-slate-600 hover:text-emerald-300 transition-all" href="#">Security</a>
+<a class="font-inter text-xs uppercase tracking-widest text-slate-600 hover:text-emerald-300 transition-all" href="#">Tax Compliance</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ELSS (Equity Linked Saving Scheme)",
+    "category": "80C",
+    "risk": "medium",
+    "lockIn": "3 years",
+    "returns": "market-linked",
+    "description": "Tax-saving mutual fund with the shortest lock-in period."
+  },
+  {
+    "name": "PPF (Public Provident Fund)",
+    "category": "80C",
+    "risk": "low",
+    "lockIn": "15 years",
+    "returns": "fixed (approx 7.1%)",
+    "description": "Government-backed long-term savings scheme with tax-free returns."
+  },
+  {
+    "name": "Tax Saver FD",
+    "category": "80C",
+    "risk": "low",
+    "lockIn": "5 years",
+    "returns": "fixed",
+    "description": "Fixed deposit with a 5-year lock-in period eligible for 80C."
+  },
+  {
+    "name": "NPS (National Pension System)",
+    "category": "NPS",
+    "risk": "medium",
+    "lockIn": "till retirement (age 60)",
+    "returns": "market-linked",
+    "description": "Pension scheme offering an additional ₹50,000 deduction under 80CCD(1B)."
+  },
+  {
+    "name": "Health Insurance (Self/Parents)",
+    "category": "80D",
+    "risk": "low",
+    "lockIn": "1 year",
+    "returns": "protection",
+    "description": "Health insurance premium coverage under section 80D."
+  }
+]

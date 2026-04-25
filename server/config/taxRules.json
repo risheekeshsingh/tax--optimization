@@ -1,0 +1,17 @@
+{
+  "80C": {
+    "limit": 150000,
+    "description": "Investments like ELSS, PPF, Tax Saver FD",
+    "category": "tax-saving"
+  },
+  "80D": {
+    "limit": 25000,
+    "description": "Health insurance premium deduction",
+    "category": "insurance"
+  },
+  "NPS": {
+    "limit": 50000,
+    "description": "Additional deduction under section 80CCD(1B)",
+    "category": "retirement"
+  }
+}

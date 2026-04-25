@@ -1,0 +1,13 @@
+{
+  "name": "tax-filling-ai",
+  "version": "1.0.0",
+  "description": "Full-stack MERN AI Tax Saver",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "npx concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC"
+}
